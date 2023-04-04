@@ -19,15 +19,15 @@ const ItemCount = ({ stock, initial=1, onAdd }) => {
 
   return (
     <div className="container-btn">
-    <h2>Cantidad: {contador}</h2>
+    <h2 style={{color:"#af0d83"}}>Cantidad: {contador}</h2>
     <div className="btns">
-      <Button variant="outlined" onClick={sumar}>
+      <Button variant="outlined" onClick={sumar} color="secondary">
         +
       </Button>
-      <Button variant="contained" onClick={() => onAdd(contador)}>
+      <Button variant="contained" color="secondary" onClick={() => onAdd(contador)}>
         agregar al carrito
       </Button>
-      <Button variant="outlined" onClick={restar}>
+      <Button variant="outlined" onClick={restar} color="secondary">
         -
       </Button>
     </div>

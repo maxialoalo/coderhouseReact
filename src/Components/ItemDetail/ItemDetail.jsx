@@ -5,19 +5,19 @@ const ItemDetail = ({ productSelected, onAdd, quantity }) => {
   return (
     <div className={"containerItemDetail"}>
       <div className={"containerImage"}>
-        <img src={productSelected.img} alt="" />
+        <img src={productSelected.img} alt="Producto seleccionado" />
       </div>
 
       <div className={"containerDetail"}>
-        <h2 style={{ fontFamily: "monospace" }}>
+        <h2 style={{ fontFamily: "monospace", color:"#af0d83" }}>
           <span style={{ fontSize: "23px" }}>Nombre:</span>{" "}
           {productSelected.title}
         </h2>
-        <h2 style={{ fontFamily: "monospace" }}>
+        <h2 style={{ fontFamily: "monospace", color:"#af0d83" }}>
           <span style={{ fontSize: "23px" }}>Descripcion:</span>{" "}
           {productSelected.description}
         </h2>
-        <h2 style={{ fontFamily: "monospace" }}>
+        <h2 style={{ fontFamily: "monospace", color:"#af0d83"}}>
           <span style={{ fontSize: "23px" }}>Precio:</span> $
           {productSelected.price}.-
         </h2>

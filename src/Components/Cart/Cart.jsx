@@ -31,10 +31,11 @@ const Cart = () => {
 
   if(orderId){
     return (
-      <div style={{display:"flex", justifyContent:"center"}}>
-        <h2>Gracias por su compra</h2>
-        <h4>el comprobante es : {orderId}</h4>
-        <Link to="/">Seguir comprando</Link>
+      <div>
+        <img src="" alt="" />
+        <h2 className="font">Gracias por su compra</h2>
+        <h4 className="font">el comprobante es : {orderId}</h4>
+        <Link to="/" className="font">Seguir comprando</Link>
       </div>
     )
   }
@@ -49,9 +50,9 @@ const Cart = () => {
                 <div key={item.id} className="cart-item">
                   <img src={item.img} alt="" />
                   <div className="cart-item-info">
-                    <h2>{item.name}</h2>
-                    <h2>${item.price}.-</h2>
-                    <h2>Unidades: {item.quantity}</h2>
+                    <h2 className="secondary">{item.name}</h2>
+                    <h2 className="secondary">${item.price}.-</h2>
+                    <h2 className="secondary">Unidades: {item.quantity}</h2>
                     <Button
                       color="secondary"
                       variant="contained"
@@ -65,14 +66,14 @@ const Cart = () => {
             })}
           </div>
           <div className="cart-info">
-            <h3>Precio total: {getTotalPrice()}</h3>
+            <h3 >Precio total: {getTotalPrice()}</h3>
             <h3>Descuento: - </h3>
             <h3>Precio final: -</h3>
 
             {cart.length > 0 && (
               <div className="btn-cart">
-                <Button variant="contained" onClick={()=>setShowForm(true)}>Terminar la compra</Button>
-                <Button onClick={clear} variant="contained">
+                <Button color="secondary"variant="contained" onClick={()=>setShowForm(true)}>Terminar la compra</Button>
+                <Button onClick={clear} variant="contained" color="secondary">
                   Vaciar carrito
                 </Button>
               </div>
