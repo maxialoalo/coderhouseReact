@@ -35,7 +35,7 @@ const Cart = () => {
         <img src="" alt="" />
         <h2 className="font">Gracias por su compra</h2>
         <h4 className="font">el comprobante es : {orderId}</h4>
-        <Link to="/" className="font">Seguir comprando</Link>
+        <Link to="/" className="font" style={{fontSize:20, fontWeight:"bold"}}>Seguir comprando</Link>
       </div>
     )
   }
