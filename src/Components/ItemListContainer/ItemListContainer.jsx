@@ -39,7 +39,7 @@ const ItemListContainer = () => {
 
   if (items.length === 0) {
     return (
-      <div style={{ display: "flex", justifyContent: "center",alignItems:"center"}}>
+      <div style={{display: "flex", justifyContent: "center",alignItems:"center"}}>
         <PacmanLoader
           color={"#e1d4c7"}
           // loading={loading}

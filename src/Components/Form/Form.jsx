@@ -18,7 +18,7 @@ const Form = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // VALIDACIONES
+   
     if (userData.name.length < 5) {
       setError(true);
       setErrorMessage("el nombre no puede ser menor a 5");
