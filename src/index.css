@@ -7,6 +7,14 @@
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
+}
+body{
+  /* Created with https://www.css-gradient.com */
+background: #172726;
+background: -webkit-linear-gradient(top left, #172726, #2F1229);
+background: -moz-linear-gradient(top left, #172726, #2F1229);
+background: linear-gradient(to bottom right, #172726, #2F1229);
 }
 
 code {

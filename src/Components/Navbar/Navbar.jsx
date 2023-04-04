@@ -4,27 +4,47 @@ import CartWidget from "../CartWidget/CartWidget";
 
 import { Link } from "react-router-dom";
 
+
 const Navbar = ({ children }) => {
-  let numero = 12;
+  const cate = [ 
+    {
+      title: "Todas",
+      path: "/",
+      id: 1
+    },
+    {
+      title: "Pc Armadas",
+      path: "/category/pc-armadas",
+      id: 2
+    },
+    {
+      title: "Notebooks",
+      path: "/category/notebooks",
+      id: 3
+    }
+  ]
+
   return (
     <div>
       <div className={styles.containerNavbar}>
         <Link to="/" style={{ color: "#e1d4c7", textDecoration: "none" }}>
-        <img src="https://res.cloudinary.com/dahcjcgqj/image/upload/v1677026679/pngegg_h44gap.png" alt="Logo" className={styles.navbarLogo} />
+          MaxiGaming
         </Link>
 
         <ul className={styles.containerList}>
-          <Link to="/" className={styles.navbarItem}>
-            Todas
-          </Link>
-          <Link to="/category/pc-armadas" className={styles.navbarItem}>
-            Pc Armadas
-          </Link>
-          <Link to="/category/notebooks" className={styles.navbarItem}>
-            Notebooks
-          </Link>
+          {cate?.map((category) => {
+            return (
+              <Link
+                key={category.id}
+                to={category.path}
+                className={styles.navbarItem}
+              >
+                {category.title}
+              </Link>
+            );
+          })}
         </ul>
-        <CartWidget numero={numero} />
+        <CartWidget />
       </div>
       {children}
     </div>
